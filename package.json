@@ -20,7 +20,7 @@
     "socket.io-client": "^2.3.0"
   },
   "scripts": {
-    "start": "node ./server/server.js",
+    "start": "node server/server.js",
     "start-client": "react-scripts start",
     "start-server": "nodemon ./server/server.js",
     "build": "react-scripts build",
