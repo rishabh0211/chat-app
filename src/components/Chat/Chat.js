@@ -73,14 +73,14 @@ const Chat = () => {
         latitude: position.coords.latitude,
         longitude: position.coords.longitude
       }, () => {
-        console.log('Location shared!');
+
       });
     });
   };
 
   const sendImage = image => {
     socket.emit('sendImage', image, () => {
-      console.log('image sent');
+
     });
   };
 
