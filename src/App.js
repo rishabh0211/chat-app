@@ -11,7 +11,7 @@ const App = () => {
     <Router>
       <Route path="/" exact component={Join} />
       <Route path="/chat" component={() => {
-        return  <Suspense fallback={Loading}>
+        return  <Suspense fallback={<Loading />}>
                   <ChatComponent />
                 </Suspense>
       }} />
