@@ -2,7 +2,7 @@ import React, { Suspense } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Join from "./components/Join/Join";
-// import Chat from "./components/Chat/Chat";
+import Loading from "./components/Loading/Loading";
 
 const ChatComponent = React.lazy(() => import("./components/Chat/Chat"));
 
@@ -11,7 +11,7 @@ const App = () => {
     <Router>
       <Route path="/" exact component={Join} />
       <Route path="/chat" component={() => {
-        return  <Suspense fallback="<div>Loading...</div>">
+        return  <Suspense fallback={Loading}>
                   <ChatComponent />
                 </Suspense>
       }} />
