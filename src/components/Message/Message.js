@@ -17,7 +17,7 @@ const Message = ({ message: { user, text, url, isLocation, isImage, image }, nam
         <div className={!isImage ? "messageBox backgroundOrange": ""}>
           {isLocation &&
             <a href={url} target="_blank" rel="noopener noreferrer" className="messageText location colorWhite" >{user}'s location</a>}
-          {isImage && <img className="image-message" src={image} />}
+          {isImage && <img className="image-message" src={image} alt="user-image" />}
           {!isLocation && !isImage && <p className="messageText colorWhite">{ReactEmoji.emojify(text)}</p>}
         </div>
       </div>
@@ -26,7 +26,7 @@ const Message = ({ message: { user, text, url, isLocation, isImage, image }, nam
           <div className={!isImage ? "messageBox backgroundLight": ""}>
             {isLocation &&
               <a href={url} target="_blank" rel="noopener noreferrer" className="messageText location colorDark" >{user}'s location</a>}
-            {isImage && <img className="image-message" src={image} />}
+            {isImage && <img className="image-message" src={image} alt="user-image" />}
             {!isLocation && !isImage && <p className="messageText colorDark">{ReactEmoji.emojify(text)}</p>}
           </div>
           <p className="sentText pl-10">{user}</p>
