@@ -20,7 +20,7 @@ const Chat = () => {
   useEffect(() => {
     const { name, room } = queryString.parse(window.location.search);
 
-    socket = io('http://localhost:5000');
+    socket = io();
 
     setName(name);
     setRoom(room);
